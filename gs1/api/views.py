@@ -18,3 +18,8 @@ def student_detail(request):
     return HttpResponse(json_data, content_type = 'apllication/json')
 
 
+def student_update(request):
+    stu = Student.objects.all()
+    serializer = StudentSerializer(stu)
+    return student_update
+
